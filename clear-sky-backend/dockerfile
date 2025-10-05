@@ -12,6 +12,5 @@ COPY --from=builder /app/target/*.jar app.jar
 
 # Set the port Google Cloud will expose
 EXPOSE 8080
-
 # Default command
 ENTRYPOINT ["java", "-jar", "app.jar"]
