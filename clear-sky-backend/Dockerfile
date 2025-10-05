@@ -1,16 +1,14 @@
-# Stage 1: Build the app using Maven
+# Stage 1: Build
 FROM maven:3.9.6-eclipse-temurin-17 AS builder
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
-RUN mvn clean package -DskipTests
+# Run mvn with explicit Java version if needed
+RUN mvn clean package -DskipTests -e
 
-# Stage 2: Run the app with a lightweight JRE
+# Stage 2: Run
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
-
-# Set the port Google Cloud will expose
 EXPOSE 8080
-# Default command
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
