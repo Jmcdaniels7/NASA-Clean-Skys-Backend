@@ -1,8 +1,10 @@
-# Stage 1: Build
-FROM maven:3.9.6-eclipse-temurin-17 AS builder
+# Stage 1: Build with Java 21
+FROM maven:3.9.6-eclipse-temurin-21 AS builder
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
+RUN mvn clean package -DskipTests
+
 # Run mvn with explicit Java version if needed
 RUN mvn clean package -DskipTests -e
 
