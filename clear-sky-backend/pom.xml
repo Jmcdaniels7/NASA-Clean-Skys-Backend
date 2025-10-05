@@ -42,13 +42,16 @@
             <artifactId>postgresql</artifactId>
             <version>42.6.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.google.cloud.sql</groupId>
-            <artifactId>postgres-socket-factory</artifactId>
-            <version>1.13.1</version>
-        </dependency>
-		
+        
+		<dependency>
+			<groupId>com.google.cloud.sql</groupId>
+			<artifactId>postgres-socket-factory</artifactId>
+			<version>1.25.3</version>
+		</dependency>
 
+
+
+        
         <!-- Testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -66,13 +69,18 @@
         </plugins>
     </build>
 
-    <!-- Add Google Maven repository for dependencies -->
-    <repositories>
-        <repository>
-            <id>google-maven-central</id>
-            <url>https://maven.google.com/</url>
-        </repository>
-    </repositories>
+	<repositories>
+		<repository>
+			<id>central</id>
+			<name>Maven Central</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+		<repository>
+			<id>google-maven-central</id>
+			<url>https://maven.google.com/</url>
+		</repository>
+	</repositories>
+
 
     <!-- Add Google Maven plugin repository for plugins if needed -->
     <pluginRepositories>
