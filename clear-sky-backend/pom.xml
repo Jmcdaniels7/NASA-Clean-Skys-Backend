@@ -36,13 +36,6 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
-        <!-- H2 for local testing -->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
         <!-- Cloud SQL PostgreSQL -->
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -55,11 +48,6 @@
             <version>1.13.1</version>
         </dependency>
 		
-		<dependency>
-			<groupId>com.google.cloud.sql</groupId>
-			<artifactId>cloud-sql-connector-jdbc-sqlserver</artifactId>
-			<version>1.25.3</version>
-		</dependency>
 
         <!-- Testing -->
         <dependency>
