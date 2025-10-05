@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS subscribers (
+    id SERIAL PRIMARY KEY,
+    phone VARCHAR(50),
+    area VARCHAR(100)
+);
+
+INSERT INTO subscribers (phone, area) VALUES
+('2605599999', 'Fort Wayne');

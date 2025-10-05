@@ -54,6 +54,12 @@
             <artifactId>postgres-socket-factory</artifactId>
             <version>1.13.1</version>
         </dependency>
+		
+		<dependency>
+			<groupId>com.google.cloud.sql</groupId>
+			<artifactId>cloud-sql-connector-jdbc-sqlserver</artifactId>
+			<version>1.25.3</version>
+		</dependency>
 
         <!-- Testing -->
         <dependency>
