@@ -12,7 +12,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/api/subscribers")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://www.clearskiesindy.earth/")
 public class SubscriberController {
 
     private final SubscriberService service;
